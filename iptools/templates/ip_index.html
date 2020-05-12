@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>What Is My IP Address? (IPv4 & IPv6) - Show My IP</title>
+<link rel="icon" href="#" type="image/png">
+<link rel="canonical" href="#/" />
+<link rel="stylesheet" href="{% static 'css/style.min.css' %}" media="screen" />
+<!--[if lte IE 6]>
+		<link rel="stylesheet" href="//universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+	<![endif]-->
+</head>
+<body>
+<header id="header" class="container clearfix">
+<a href="/" id="logo">
+<img src="#" alt="ARC">
+</a>
+</header>
+<section id="content" class="container clearfix">
+<center><h1>What is my IP?</h1></center>
+<p>Check your IP address on Show My IP instantly with other details like the country, state and the city that IP is located in.</p>
+<center><h2>{{iptool.query}}</h2></center>
+<center>
+    <!-- your ads here -->
+</center>
+<b>Details:</b>
+<table class="iptab">
+	{% for mykey,myvalue in iptool.items %}
+<tr>
+<td>{{mykey}}</td><td><b>{{myvalue}} </b></td>
+</tr>
+	{% endfor %}
+
+</table>
+<center>
+    <!-- your ad here-->
+</center>
+<div id="ipmap"></div>
+<h2>What is an IP Address?</h2>
+<p>I bet you’ve always wondered “What’s my IP?” Well, you’re not alone in this. There are billions of computer users worldwide who also wonder “What is my IP?” too. Most of them do not have sufficient knowledge about IP addresses too. There might come a time when you may be required to perform a quick <a href="/iptools">IP address lookup</a>. It is therefore important to know the fundamental aspects of the IP address and the way they work.</p>
+<p>IP is short for “Internet Protocol”. An IP address basically lets you know that you are now connected to the internet. It is one of the most basic requirements in a network and no network can be designed without the facility to provide IP addresses to track every computer and device that connects to it. The IP address connects your computer or internet-enabled device to your ISP (Internet Service Provider) which in turn connects your device to the internet.</p>
+<p>In simple terms, an IP address can be defined as a computer’s virtual address in the World Wide Web. This works as a tracker for the internet to allow access to view and download information, images, emails, and other data.</p>
+<p>The next time you wonder “What is my IP address?”, then think of it as a unique code that identifies your computer on the worldwide network. Your IP allows your computer to receive emails, images and other data from the web.</p>
+<p>An IP address normally consists of 4 sets of 1 to 3 digits separated by a dot. The sets of numbers can range between 0 and 255 only though.</p>
+<p>However, it will not always be the same and might change frequently. Despite this change, it will not affect the way you browse the internet. An IP address is assigned to any device that accesses the internet at any point in time.</p>
+</section>
+<footer id="footer" class="clearfix">
+<div class="container">
+<div class="three-fourth">
+<p><b>Disclaimer:</b> The location and geo details of an IP address are not always accurate.</p>
+<p>Scrapping this website is not allowed. You will be temporarily banned if you make too many requests in an hour.</p>
+</div>
+</div>
+</footer>
+<footer id="footer-bottom" class="clearfix">
+<div class="container">
+<ul>
+<li>&copy; 2000-2020 ARC</li>
+<li><a href=#" target="_blank">Contact Us</a></li>
+<li><a href="#" target="_blank">Privacy Policy</a></li>
+</ul>
+</div>
+</footer>
+</body>
+</html>

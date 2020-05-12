@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<center>
+<form class="form-horizontal" action="/wordranker/result" method="POST">
+    <fieldset>
+    {% csrf_token %}
+    <!-- Form Name -->
+    <legend>Word Frequency Checker</legend>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="textinput"></label>  
+      <div class="col-md-8">
+      <input id="textinput" name="url" type="text" placeholder="Enter url" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+    
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="singlebutton"></label>
+      <div class="col-md-4">
+        <button id="singlebutton" name="submit" type='submit' class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+    
+    </fieldset>
+    </form>
+</center> 
+</body>
+</html>
+    
